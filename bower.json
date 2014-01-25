@@ -2,6 +2,11 @@
   "name": "ngExpress-bundles-ui",
   "version": "0.0.1",
   "main": ["./dist/bundle.js", "./dist/bundle.css"],
+  "ignore": [
+    "src",
+    "Gruntfile.js",
+    "package.json"
+  ],
   "dependencies": {
     "jquery": "~1.11.0",
     "angular": "1.2.9",
