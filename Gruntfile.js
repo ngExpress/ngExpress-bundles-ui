@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         clean: {
-            bundle: {
+            dist: {
                 files: [{
                     dot: true,
                     src: [
@@ -17,14 +17,21 @@ module.exports = function(grunt) {
         },
 
         concat: {
-            bundle: {
+            js: {
                 src: [
+                    'bower_components/select2/select2.js', 
                     'bower_components/angular-bootstrap/ui-bootstrap-tpls.js', 
                     'bower_components/angular-ui-utils/ui-utils.js', 
                     'bower_components/angular-ui-select2/src/select2.js', 
                     'src/bundle.js'],
-                dest: 'dist/bundle.js',
+                dest: 'dist/bundle.js'
             },
+            css: {
+                src: [
+                    'bower_components/select2/select2.css', 
+                    'bower_components/select2/select2-bootstrap.css'],
+                dest: 'dist/bundle.css'
+            }
         },
 
         ngmin: {
@@ -39,7 +46,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean',
-        'concat',
+        'concat:js',
+        'concat:css',
         'ngmin'
     ]);
 
