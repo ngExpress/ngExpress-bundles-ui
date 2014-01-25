@@ -5,7 +5,9 @@
   "ignore": [
     "src",
     "Gruntfile.js",
-    "package.json"
+    "package.json",
+    ".gitignore",
+    ".bower.json"
   ],
   "dependencies": {
     "jquery": "~1.11.0",
