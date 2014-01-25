@@ -8,7 +8,6 @@ module.exports = function(grunt) {
         clean: {
             dist: {
                 files: [{
-                    dot: true,
                     src: [
                         'dist'
                     ]
@@ -28,27 +27,16 @@ module.exports = function(grunt) {
             },
             css: {
                 src: [
-                    'bower_components/select2/select2.css', 
+                    'src/select2.custom.css', 
                     'bower_components/select2/select2-bootstrap.css'],
                 dest: 'dist/bundle.css'
-            }
-        },
-
-        ngmin: {
-            bundle: {
-                files: [{
-                    src: 'dist/bundle.js',
-                    dest: 'dist/bundle.min.js'
-                }]
             }
         }
     });
 
     grunt.registerTask('build', [
         'clean',
-        'concat:js',
-        'concat:css',
-        'ngmin'
+        'concat'
     ]);
 
     grunt.registerTask('default', [
