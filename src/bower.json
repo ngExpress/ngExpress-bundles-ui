@@ -1,0 +1,9 @@
+{
+  "name": "ngExpress-bundles-ui",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular-bootstrap": "~0.10.0",
+    "angular-ui-select2": "~0.0.5",
+    "angular-ui-utils": "~0.1.0"
+  }
+}
