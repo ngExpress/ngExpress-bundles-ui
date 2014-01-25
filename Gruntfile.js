@@ -10,7 +10,7 @@ module.exports = function(grunt) {
                 files: [{
                     dot: true,
                     src: [
-                        '../dist'
+                        'dist'
                     ]
                 }]
             }
@@ -22,16 +22,16 @@ module.exports = function(grunt) {
                     'bower_components/angular-bootstrap/ui-bootstrap-tpls.js', 
                     'bower_components/angular-ui-utils/ui-utils.js', 
                     'bower_components/angular-ui-select2/src/select2.js', 
-                    'bundle.js'],
-                dest: '../dist/bundle.js',
+                    'src/bundle.js'],
+                dest: 'dist/bundle.js',
             },
         },
 
         ngmin: {
             bundle: {
                 files: [{
-                    src: '../dist/bundle.js',
-                    dest: '../dist/bundle.min.js'
+                    src: 'dist/bundle.js',
+                    dest: 'dist/bundle.min.js'
                 }]
             }
         }
